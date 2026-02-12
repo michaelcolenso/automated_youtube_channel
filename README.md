@@ -17,7 +17,9 @@ Download your OATH file and name it as "googleAPI.json" in your project folder.
 
 6. Create an instagram account and follow accounts you want to scrape from
 
-7. Open config.py in a text editor and fill in instagram credentials
+7. Set Instagram credentials in environment variables (recommended) or update `config.py`:
+   - `IG_USERNAME`
+   - `IG_PASSWORD`
 
 - Note that you can edit variables inside main.py in a text editor and things such as MAX_CLIP_LENGTH.
 
