@@ -98,13 +98,15 @@ def routine():
 
     # Step 2: Make Compilation
     print("Making Compilation...")
-    makeCompilation(path = videoDirectory,
-                    introName = INTRO_VID,
-                    outroName = OUTRO_VID,
-                    totalVidLength = TOTAL_VID_LENGTH,
-                    maxClipLength = MAX_CLIP_LENGTH,
-                    minClipLength = MIN_CLIP_LENGTH,
-                    outputFile = outputFile)
+    clip_description = makeCompilation(path = videoDirectory,
+                                       introName = INTRO_VID,
+                                       outroName = OUTRO_VID,
+                                       totalVidLength = TOTAL_VID_LENGTH,
+                                       maxClipLength = MAX_CLIP_LENGTH,
+                                       minClipLength = MIN_CLIP_LENGTH,
+                                       outputFile = outputFile)
+    if clip_description:
+        description += "\n\n" + clip_description
     print("Made Compilation!")
     
     description += "\n\nCopyright Disclaimer, Under Section 107 of the Copyright Act 1976, allowance is made for 'fair use' for purposes such as criticism, comment, news reporting, teaching, scholarship, and research. Fair use is a use permitted by copyright statute that might otherwise be infringing. Non-profit, educational or personal use tips the balance in favor of fair use.\n\n"
@@ -146,4 +148,3 @@ attemptRoutine()
 while True:
     schedule.run_pending()  
     time.sleep(60) # wait one min
-
